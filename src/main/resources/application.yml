@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: daian0401
+  jpa:
+    show-sql: false
+    jackson:
+      default-property-inclusion: non_null
+
+
+server:
+  port: 8081
+my-config:
+  prePassword: e10adc3949ba59abbe56e057f20f883e
+  key:
+    locationIdNumber: 4 #locationId 的位数
+    collectionIdNumber: 4 # collectId 的位数
+    workIdNumber: 4 #员工工号后缀位数
+    noticeIdNumber: 4 #公告id的位数
+    signInIdNumber: 8 #用户每日签到数据id
+    idNumber : 8 #一种id
