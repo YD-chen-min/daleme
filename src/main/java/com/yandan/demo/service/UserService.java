@@ -47,7 +47,7 @@ public interface UserService {
      * @param roleId
      * @return 写入数据库的user对象
      */
-    WorkInfo addUser(String workId, String name, String departmentId, Integer roleId, String password) throws ApiException;
+    WorkInfo addUser(String workId, String name, String departmentId, Integer roleId, String password,String icon) throws ApiException;
 
     /**
      *

@@ -62,7 +62,7 @@ public class UserController {
         }
         try {
             WorkInfo userInfo=userService.addUser(workId,userForm.getName(),userForm.getDepartmentId(),
-                    Integer.parseInt(userForm.getRoleId()),myConfig.getPrePassword());
+                    Integer.parseInt(userForm.getRoleId()),myConfig.getPrePassword(),myConfig.getIcon());
             UserMsg userMsg=new UserMsg();
             userMsg.setWorkId(userInfo.getWorkId());
             String department=departmentService.getDepartment(userInfo.getDepartmentId()).getName();

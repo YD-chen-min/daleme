@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public WorkInfo addUser(String workId, String name, String departmentId, Integer roleId, String password) throws ApiException {
+    public WorkInfo addUser(String workId, String name, String departmentId, Integer roleId, String password,String icon) throws ApiException {
         if(getUserByWorkId(workId)!=null) throw new ApiException(ErrorEnum.USER_ALREADY_EXISTS);
         WorkInfo user=new WorkInfo();
         user.setWorkId(workId);
@@ -73,6 +73,7 @@ public class UserServiceImpl implements UserService {
         user.setIsAdmin(roleId);
         user.setPassword(password);
         user.setName(name);
+        user.setIcon(icon);
         return userRepository.save(user);
     }
 

@@ -27,4 +27,6 @@ public class MyConfig {
     private Integer signInIdNumber;
     @Value("${my-config.key.idNumber}")
     private Integer idNumber;
+    @Value("${my-config.icon}")
+    private String icon;
 }
