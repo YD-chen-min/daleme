@@ -42,11 +42,12 @@ public class UserServiceImpl implements UserService {
             throw new ApiException(ErrorEnum.USER_IS_NOT_EXIST);
         }
         if(user.getDepartmentId()!=null&&!"".equals(user.getDepartmentId())) user1.setDepartmentId(user.getDepartmentId());
-        if(user.getPhoneNumber()!=null&&!"".equals(user.getPhoneNumber())) {
-            if(userRepository.findByPhoneNumber(user.getPhoneNumber())!=null&&
-                    !userRepository.findByPhoneNumber(user.getPhoneNumber()).getWorkId().equals(user.getWorkId())) throw new ApiException(ErrorEnum.USER_PHONE_EXIST);
-            user1.setPhoneNumber(user.getPhoneNumber());
-        }
+//        if(user.getPhoneNumber()!=null&&!"".equals(user.getPhoneNumber())) {
+//            if(userRepository.findByPhoneNumber(user.getPhoneNumber())!=null&&
+//                    !userRepository.findByPhoneNumber(user.getPhoneNumber()).getWorkId().equals(user.getWorkId())) throw new ApiException(ErrorEnum.USER_PHONE_EXIST);
+//            user1.setPhoneNumber(user.getPhoneNumber());
+//        }
+        user1.setPhoneNumber(user.getPhoneNumber());
         if(user.getPassword()!=null&&!"".equals(user.getPassword())) user1.setPassword(user.getPassword());
         if (user.getIcon()!=null&&!"".equals(user.getIcon())) user1.setIcon(user.getIcon());
         if (user.getMac()!=null&&!"".equals(user.getMac())) user1.setMac(user.getMac());
