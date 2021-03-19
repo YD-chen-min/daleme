@@ -72,7 +72,7 @@ public class Converter {
         return notice;
     }
     public static DaySignWorkVO daySignWork2DaySignWorkVO(DaySignWork daySignWork,String locationName,String departmentName,
-                                                          String work,String collectName,int ifIcon,String  collectInfo,String address){
+                                                          String work,String collectName,int ifIcon,String  collectInfo,String address,String startTime,String endTime){
         DaySignWorkVO daySignWorkVO=new DaySignWorkVO();
         BeanUtils.copyProperties(daySignWork,daySignWorkVO);
         if (daySignWork.getIfSign()==0) daySignWorkVO.setIfSign("未签到");
@@ -85,6 +85,8 @@ public class Converter {
         else daySignWorkVO.setCollectType("拍照签到");
         daySignWorkVO.setCollectInfo(collectInfo);
         daySignWorkVO.setCollectName(collectName);
+        daySignWorkVO.setStartTime(startTime);
+        daySignWorkVO.setEndTime(endTime);
         return daySignWorkVO;
     }
 

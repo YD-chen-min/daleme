@@ -27,4 +27,6 @@ public class DaySignWorkVO {
     private String workId;
     private String collectInfo;
     private String address;
+    private String endTime;
+    private String startTime;
 }

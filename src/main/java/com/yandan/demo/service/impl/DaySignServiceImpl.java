@@ -134,7 +134,7 @@ public class DaySignServiceImpl implements DaySignService {
         if (collectInfo!=null) ifIcon=collectInfo.getIfIcon();
         else ifIcon=0;
         daySignWorkVO= Converter.daySignWork2DaySignWorkVO(daySignWork,locationInfo,
-                departmentInfo.getName(),work,collectInfo.getCollectName(),ifIcon,collectInfo.getInfo(),address);
+                departmentInfo.getName(),work,collectInfo.getCollectName(),ifIcon,collectInfo.getInfo(),address,collectInfo.getStartTime(),collectInfo.getEndTime());
         return daySignWorkVO;
     }
 
