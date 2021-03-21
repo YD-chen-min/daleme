@@ -106,7 +106,7 @@ public class SignTimesWorkServiceImpl implements SignTimesWorkService {
     @Override
     public SignTimesWork addByWorkInfo(WorkInfo workInfo) throws ApiException {
         SignTimesWork signTimesWork=signTimesWorkRepository.findById(workInfo.getWorkId()).orElse(null);
-        if(signTimesWork!=null) return null;
+        if(signTimesWork!=null) return null;  
         SignTimesWork signTimesWork1=new SignTimesWork();
         signTimesWork1.setDepartmentId(workInfo.getDepartmentId());
         signTimesWork1.setWorkId(workInfo.getWorkId());
